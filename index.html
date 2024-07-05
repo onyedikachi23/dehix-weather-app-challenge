@@ -1,0 +1,168 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather app</title>
+
+		<link
+			rel="shortcut icon"
+			href="./images/favicon.png"
+			sizes="32/32"
+			type="image/x-icon" />
+
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+			rel="stylesheet" />
+
+		<!-- link preview -->
+		<meta
+			property="og:title"
+			content="NerdyNerd | Weather forecast web app" />
+		<meta
+			property="og:description"
+			content="A way to quickly know your environment's weather condition" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://i.ibb.co/N6FXKht/full-page-screenshot.png" />
+		<meta
+			property="og:url"
+			content="https://weather-app-nerdynerd.netlify.app/" />
+	</head>
+	<body class="night">
+		<div class="body-inner-container">
+			<main class="main-section">
+				<div class="main-section-inner-container">
+					<!-- search input form -->
+					<form id="location-search-form" role="search" novalidate>
+						<div class="form-inner-wrapper">
+							<div class="input-field-container">
+								<input
+									type="search"
+									id="location-search-input"
+									placeholder="enter city or country name"
+									value="london"
+									minlength="3" />
+								<span class="error-message hide">
+									Please enter valid location
+								</span>
+							</div>
+							<button id="submit-btn" type="submit">
+								<i class="ri-search-line"></i>
+							</button>
+						</div>
+					</form>
+					<!-- search form end -->
+
+					<!-- forecast details list -->
+					<div class="forecast-list-wrapper">
+						<dl class="forecast-list">
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="calculationTime">
+								<dt class="forecast-title"
+									>Time of calculation</dt
+								>
+								<dl class="forecast-description"
+									>12:00 AM UTC, 24th July 2024</dl
+								>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="weatherSate">
+								<dt class="forecast-title">Weather</dt>
+								<dl class="forecast-description"
+									>moderate rain</dl
+								>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="temperature">
+								<dt class="forecast-title">Temperature</dt>
+								<dl class="forecast-description">29 °C</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="pressure">
+								<dt class="forecast-title">Pressure</dt>
+								<dl class="forecast-description">1025hPa</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="humidity">
+								<dt class="forecast-title">Humidity</dt>
+								<dl class="forecast-description">64%</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="visibility">
+								<dt class="forecast-title">Visibility</dt>
+								<dl class="forecast-description">10km</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="windSpeed">
+								<dt class="forecast-title">Wind</dt>
+								<dl class="forecast-description">2km/h</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="clouds">
+								<dt class="forecast-title">Clouds</dt>
+								<dl class="forecast-description">60%</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<div
+								class="forecast-list-details-container"
+								id="base">
+								<dt class="forecast-title">Base</dt>
+								<dl class="forecast-description">stations</dl>
+							</div>
+							<!-- forecast details end -->
+
+							<!-- forecast details start -->
+							<!-- <div class="forecast-list-details-container" id="">
+							<dt class="forecast-title">title</dt>
+							<dl class="forecast-description">description</dl>
+						</div> -->
+							<!-- forecast details end -->
+						</dl>
+					</div>
+					<div class="http-error-message hide"
+						>location data not found</div
+					>
+				</div>
+			</main>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

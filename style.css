@@ -1,0 +1,212 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--dark-slate-gray: rgb(26, 38, 38);
+	--slight-transparent-black: hsla(0, 0%, 0%, 0.82);
+}
+
+body {
+	background: url(./images/thick-heavy-clouds-background-image.jpg)
+		var(--dark-slate-gray) no-repeat center/cover;
+	margin: 0;
+}
+
+body.night {
+	background-image: url(./images/thick-heavy-clouds-background-image-night-version.jpg);
+}
+
+.body-inner-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100dvw;
+	height: 100dvh;
+}
+
+/* main section */
+.main-section {
+	background-color: var(--slight-transparent-black);
+	border-radius: 0.875rem;
+	width: clamp(calc(139rem / 8), 80%, 26rem);
+	height: 90%;
+	box-sizing: border-box;
+	/* overflow: auto; */
+	padding: 2rem;
+	color: white;
+}
+
+.main-section-inner-container {
+	position: relative;
+	height: 100%;
+}
+
+/* search form */
+.form-inner-wrapper {
+	display: flex;
+	gap: 0.5rem;
+	container-type: size;
+	height: 2rem;
+	/* justify-content: space-between; */
+}
+
+.input-field-container {
+	position: relative;
+	width: 74%;
+}
+
+#location-search-input {
+	appearance: none;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-radius: 0.875rem;
+	outline-color: initial;
+	color: rgb(232, 230, 227);
+	background-image: initial;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	width: 100%;
+}
+
+#location-search-input,
+.error-message {
+	font-family: "Raleway", sans-serif;
+}
+
+#location-search-input.required {
+	outline: 1px solid red;
+}
+
+#location-search-input::placeholder {
+	color: hsla(0, 0%, 100%, 0.5);
+}
+
+#location-search-input:focus {
+	outline: none;
+}
+
+#location-search-input,
+#submit-btn {
+	background-color: hsla(200, 6%, 39%, 0.17);
+}
+
+.input-field-container .error-message {
+	color: red;
+	font-size: 0.6rem;
+	font-weight: bold;
+	position: absolute;
+	left: 0;
+	top: 110%;
+}
+
+.hide {
+	display: none;
+}
+
+#submit-btn {
+	color: white;
+	font-weight: bold;
+	width: 100cqh;
+	height: 100cqh;
+	text-align: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+}
+
+#submit-btn:hover {
+	font-size: 1.1rem;
+}
+
+.http-error-message {
+	width: max-content;
+	background-color: red;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+	box-sizing: border-box;
+	padding: 0.5rem;
+	border-radius: 2rem;
+	z-index: 100;
+}
+
+/* forecast details section */
+.forecast-list-wrapper {
+	overflow-y: auto;
+	/* border: 1px solid red; */
+	height: 85%;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 0.875rem;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	box-shadow: inset 0 0 3rem 1rem hsla(0, 0%, 0%, 0.3);
+}
+
+/* scrollbar styling */
+
+/* For Firefox */
+/* .forecast-list-wrapper {
+	scrollbar-width: thin;
+	scrollbar-color: hsla(0, 0%, 100%, 0.5) hsla(0, 0%, 100%, 0.15);
+} */
+
+/* For Chrome, Safari, and Edge */
+.forecast-list-wrapper::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 0.5rem;
+	background-color: hsla(0, 0%, 100%, 0.15);
+}
+
+.forecast-list-wrapper::-webkit-scrollbar-thumb {
+	background-color: hsla(0, 0%, 100%, 0.5);
+	border-radius: 0.875rem;
+}
+
+.forecast-list-wrapper::-webkit-scrollbar-corner {
+	width: 0;
+	height: 0;
+}
+
+/* For IE and Edge Legacy */
+/* .forecast-list-wrapper {
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+} */
+
+/* forecast list */
+
+.forecast-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 0 1rem;
+	margin: 0;
+}
+
+.forecast-list-details-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.forecast-title {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	width: calc(47rem / 8);
+}
+
+.forecast-description {
+	margin: 0;
+	text-align: left;
+	font-family: "Raleway", sans-serif;
+	width: calc(31rem / 4);
+}
